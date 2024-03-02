@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/img/icon.png">
+    <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="./CSS/style.css">
 
     <title>Tabela Periodica</title>
@@ -12,11 +12,7 @@
     <div class="grandContainer">
         <div class="containerOne">
             <div class="linha1">
-                <div class="elemento elementoLaranja" onclick="exibirModal()"> <h1>H</h1> </div>
-                <div id="imagemModal" class="modal" onclick="fecharModal()">
-                    <span class="fechar" onclick="fecharModal()">&times;</span>
-                    <img class="modal-conteudo" id="imgModal" src="img/H.jpg">
-                </div>
+                <div class="elemento elementoLaranja" onclick="exibirModal('H')"> <h1 id="H">H</h1></div>
                 <div class="elemento0 "></div>
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
@@ -33,7 +29,7 @@
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
-                <div class="elemento elementoCinza"> <h1>He</h1> </div>
+                <div class="elemento elementoCinza" onclick="exibirModal('He')"> <h1>He</h1> </div>
             </div>
 
             <div class="linha">
@@ -52,7 +48,7 @@
                 <div class="elemento elementoVerdeClaro"> <h1>B</h1> </div>
                 <div class="elemento elementoLaranja"> <h1>C</h1> </div>
                 <div class="elemento elementoLaranja"> <h1>N</h1> </div>
-                <div class="elemento elementoLaranja"> <h1>O</h1> </div>
+                <div class="elemento elementoLaranja"  onclick="exibirModal('O')"> <h1 id="O">O</h1> </div>
                 <div class="elemento elementoRosa"> <h1>F</h1> </div>
                 <div class="elemento elementoCinza"> <h1>Ne</h1> </div>
             </div>
@@ -208,24 +204,48 @@
         </div>
     </div>
 
-    <script>
-        function exibirModal() {
-        var modal = document.getElementById("imagemModal");
-        var img = document.getElementById("imgModal");
 
-        modal.style.display = "block";
-        img.style.maxWidth = "50%";
-        img.style.maxHeight = "50%";
-        img.style.position = "absolute";
-        img.style.left = "50%";
-        img.style.top = "50%";
-        img.style.transform = "translate(-50%, -50%)";
+        </div>
+
+        <div id="imagemModal" class="modal" onclick="fecharModal()">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <img class="modal-content" id="imgModal">
+        </div>
+
+    </div>
+
+    <script>
+        function exibirModal(elementId) {
+            var modal = document.getElementById("imagemModal");
+            var img = document.getElementById("imgModal");
+            var imgPath;
+
+            var imageMapping = {
+                "H": "img/H.jpg",
+                "O": "img/O.jpg",
+            };
+
+            if (elementId in imageMapping) {
+                imgPath = imageMapping[elementId];
+            } else {
+                imgPath = "img/default.jpg";
+            }
+
+            img.src = imgPath;
+            modal.style.display = "block";
+            img.style.maxWidth = "50%";
+            img.style.maxHeight = "50%";
+            img.style.position = "absolute";
+            img.style.left = "50%";
+            img.style.top = "50%";
+            img.style.transform = "translate(-50%, -50%)";
         }
 
         function fecharModal() {
-        var modal = document.getElementById("imagemModal");
-        modal.style.display = "none";
-}
+            var modal = document.getElementById("imagemModal");
+            modal.style.display = "none";
+        }
     </script>
+
 </body>
 </html>
