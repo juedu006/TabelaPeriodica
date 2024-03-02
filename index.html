@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="">
+    <link rel="icon" href="/img/icon.png">
     <link rel="stylesheet" href="./CSS/style.css">
+
     <title>Tabela Periodica</title>
 </head>
 <body>
     <div class="grandContainer">
         <div class="containerOne">
             <div class="linha1">
-                <div class="elemento elementoLaranja"> <h1>H</h1> </div>
+                <div class="elemento elementoLaranja" onclick="exibirModal()"> <h1>H</h1> </div>
+                <div id="imagemModal" class="modal" onclick="fecharModal()">
+                    <span class="fechar" onclick="fecharModal()">&times;</span>
+                    <img class="modal-conteudo" id="imgModal" src="img/H.jpg">
+                </div>
                 <div class="elemento0 "></div>
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
@@ -53,8 +58,8 @@
             </div>
 
             <div class="linha">
-                <div class="elemento elementoAmarelo"></div>
-                <div class="elemento elementoVerdeAgua"></div>
+                <div class="elemento elementoAmarelo"> <h1>Na</h1></div>
+                <div class="elemento elementoVerdeAgua"> <h1>Mg</h1> </div>
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
@@ -65,96 +70,96 @@
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoVerdeClaro"></div>
-                <div class="elemento elementoLaranja"></div>
-                <div class="elemento elementoLaranja"></div>
-                <div class="elemento elementoRosa"></div>
-                <div class="elemento elementoCinza"></div>
+                <div class="elemento elementoAzulClaro"> <h1>Al</h1> </div>
+                <div class="elemento elementoVerdeClaro"> <h1>Si</h1> </div>
+                <div class="elemento elementoLaranja"> <h1>P</h1> </div>
+                <div class="elemento elementoLaranja"> <h1>S</h1> </div>
+                <div class="elemento elementoRosa"> <h1>Cl</h1> </div>
+                <div class="elemento elementoCinza"> <h1>Ar</h1> </div>
             </div>
 
             <div class="linha">
-                <div class="elemento elementoAmarelo"></div>
-                <div class="elemento elementoVerdeAgua"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoVerdeClaro"></div>
-                <div class="elemento elementoVerdeClaro"></div>
-                <div class="elemento elementoLaranja"></div>
-                <div class="elemento elementoRosa"></div>
-                <div class="elemento elementoCinza"></div>
+                <div class="elemento elementoAmarelo"> <h1>K</h1> </div>
+                <div class="elemento elementoVerdeAgua"> <h1>Ca</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Sc</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Ti</h1> </div>
+                <div class="elemento elementoAzul"> <h1>V</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Cr</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Mn</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Fe</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Co</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Ni</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Cu</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Zn</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Ga</h1> </div>
+                <div class="elemento elementoVerdeClaro"> <h1>Ge</h1> </div>
+                <div class="elemento elementoVerdeClaro"> <h1>As</h1> </div>
+                <div class="elemento elementoLaranja"> <h1>Se</h1> </div>
+                <div class="elemento elementoRosa"> <h1>Br</h1> </div>
+                <div class="elemento elementoCinza"> <h1>Kr</h1> </div>
             </div>
 
             <div class="linha">
-                <div class="elemento elementoAmarelo"></div>
-                <div class="elemento elementoVerdeAgua"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoVerdeClaro"></div>
-                <div class="elemento elementoVerdeClaro"></div>
-                <div class="elemento elementoRosa"></div>
-                <div class="elemento elementoCinza"></div>
+                <div class="elemento elementoAmarelo"> <h1>Rb</h1> </div>
+                <div class="elemento elementoVerdeAgua"> <h1>Sr</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Y</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Zr</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Nb</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Mo</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Tc</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Ru</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Rh</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Pd</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Ag</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Cd</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>In</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Sn</h1> </div>
+                <div class="elemento elementoVerdeClaro"> <h1>Sb</h1> </div>
+                <div class="elemento elementoVerdeClaro"> <h1>Te</h1> </div>
+                <div class="elemento elementoRosa"> <h1>I</h1> </div>
+                <div class="elemento elementoCinza"> <h1>Xe</h1> </div>
             </div>
 
             <div class="linha">
-                <div class="elemento elementoAmarelo"></div>
-                <div class="elemento elementoVerdeAgua"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoVerdeClaro"></div>
-                <div class="elemento elementoRosa"></div>
-                <div class="elemento elementoCinza"></div>
+                <div class="elemento elementoAmarelo"> <h1>Cs</h1> </div>
+                <div class="elemento elementoVerdeAgua"> <h1>Ba</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>La</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Hf</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Ta</h1> </div>
+                <div class="elemento elementoAzul"> <h1>W</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Re</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Os</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Ir</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Pt</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Au</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Hg</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Ti</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Pb</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Bi</h1> </div>
+                <div class="elemento elementoVerdeClaro"> <h1>Po</h1> </div>
+                <div class="elemento elementoRosa"> <h1>Ar</h1> </div>
+                <div class="elemento elementoCinza"> <h1>Rn</h1> </div>
             </div>
             
             <div class="linha">
-                <div class="elemento elementoAmarelo"></div>
-                <div class="elemento elementoVerdeAgua"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzul"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoAzulClaro"></div>
-                <div class="elemento elementoPreto"></div>
-                <div class="elemento elementoPreto"></div>
+                <div class="elemento elementoAmarelo"> <h1>Fr</h1> </div>
+                <div class="elemento elementoVerdeAgua"> <h1>Ra</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Ac</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Rf</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Db</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Sg</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Bh</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Hs</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Mt</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Ds</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Rg</h1> </div>
+                <div class="elemento elementoAzul"> <h1>Cn</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Uut</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Fl</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Uup</h1> </div>
+                <div class="elemento elementoAzulClaro"> <h1>Lv</h1> </div>
+                <div class="elemento elementoPreto"> <h1>Uus</h1> </div>
+                <div class="elemento elementoPreto"> <h1>Uuo</h1> </div>
             </div>
         </div>
 
@@ -162,45 +167,65 @@
             <div class="linhaContainer2">
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
-                <div class="elemento elementoVerdeEscuro"></div>
+                <div class="elemento elementoVerdeEscuro"> <h1>La</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Ce</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Pr</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Nd</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Pm</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Sm</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Eu</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Gd</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Tb</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Dy</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Ho</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Er</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Tm</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Yb</h1> </div>
+                <div class="elemento elementoVerdeEscuro"> <h1>Lu</h1> </div>
+                <div class="elemento0"></div>
             </div>
             
             <div class="linhaContainer2">
                 <div class="elemento0"></div>
                 <div class="elemento0"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
-                <div class="elemento elementoRoxo"></div>
+                <div class="elemento elementoRoxo"> <h1>Ac</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Th</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Pa</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>U</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Np</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Pu</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Am</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Cm</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Bk</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Cf</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Es</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Fm</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Md</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>No</h1> </div>
+                <div class="elemento elementoRoxo"> <h1>Lr</h1> </div>
+                <div class="elemento0"></div>
             </div>
         </div>
     </div>
+
+    <script>
+        function exibirModal() {
+        var modal = document.getElementById("imagemModal");
+        var img = document.getElementById("imgModal");
+
+        modal.style.display = "block";
+        img.style.maxWidth = "50%";
+        img.style.maxHeight = "50%";
+        img.style.position = "absolute";
+        img.style.left = "50%";
+        img.style.top = "50%";
+        img.style.transform = "translate(-50%, -50%)";
+        }
+
+        function fecharModal() {
+        var modal = document.getElementById("imagemModal");
+        modal.style.display = "none";
+}
+    </script>
 </body>
 </html>
